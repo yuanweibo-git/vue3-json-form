@@ -4,8 +4,10 @@ module.exports = {
   lintOnSave: false,
   configureWebpack: {
     plugins: [
-      // 配置JS在线代码编辑器monaco-editor的辅助文件
-      new MonacoWebpackPlugin(),
+      new MonacoWebpackPlugin({
+        // available options are documented at https://github.com/Microsoft/monaco-editor-webpack-plugin#options
+        languages: ['javascript', 'css', 'html', 'typescript', 'json'],
+      }),
     ],
   },
 };

@@ -1,6 +1,7 @@
 import { defineComponent, reactive } from 'vue';
 import MonacoEditor from './components/MonacoEditor';
 import SchemaForm from '../lib/SchemaForm';
+import { demoSchema } from './schema-test/demo';
 
 import './app.less';
 type Schema = any;
@@ -29,44 +30,23 @@ export default defineComponent({
       uiSchemaCode: '',
       customValidate: undefined,
     });
-    const schema = {
-      type: 'string',
-      properties: {
-        pass1: {
-          type: 'string',
-          minLength: 10,
-          title: 'password',
-        },
-        pass2: {
-          type: 'string',
-          minLength: 10,
-          title: 're-try password',
-        },
-        color: {
-          type: 'string',
-          format: 'color',
-          title: 'Input Color',
-        },
-        testkeyword: {
-          type: 'string',
-          minLength: 10,
-          test: 'true',
-          title: 'keyword test',
-        },
-      },
-    };
+    const schema = demoSchema;
     const schemaCode = toJson(schema);
 
     // closure 闭包 demo
     function handleCodeChange(field: 'schema' | 'data' | 'uiSchema', value: string) {
       try {
-        const json = JSON.parse(value);
         demo[field] = JSON.parse(value);
         (demo as any)[`${field}Code`] = value;
       } catch (err) {
         // some thing
       }
     }
+
+    const handleChange = (v: any) => {
+      demo.data = v;
+      demo.dataCode = toJson(v);
+    };
 
     const handleDataChange = (v: string) => handleCodeChange('data', v);
     const handleSchemaChange = (v: string) => handleCodeChange('schema', v);
@@ -85,7 +65,7 @@ export default defineComponent({
           </div>
 
           <div class="schema-main">
-            <SchemaForm schema={schema} value={demo.data} onChange={handleSchemaChange} />
+            <SchemaForm schema={schema} value={demo.data} onChange={handleChange} />
           </div>
         </div>
       );

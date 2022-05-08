@@ -6,11 +6,10 @@ export default defineComponent({
   name: 'SchemaForm',
   props: FiledPropsDefine,
 
-  setup(props, { slots, emit, attrs }) {
+  setup(props) {
     return () => {
-      const handleChange = (v: any) => {
-        console.log(v);
-        props.onChange(v);
+      const handleChange = (e: any) => {
+        props.onChange(e.target.value);
       };
 
       return <SchemaItem schema={props.schema} value={props.value} onChange={handleChange} />;
