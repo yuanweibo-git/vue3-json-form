@@ -59,7 +59,7 @@ export const FiledPropsDefine = {
   },
 
   onChange: {
-    type: Function as PropType<(v: any) => void>,
+    type: Function as PropType<(v: any, callBack?: any) => void>,
     required: true,
   },
 } as const;

@@ -1,7 +1,11 @@
-type Demo = {
-  type: string;
-};
+export default {
+  name: 'demo',
 
-export const demoSchema: Demo = {
-  type: 'string',
+  schema: {
+    type: 'number',
+  },
+
+  uiSchema: {},
+
+  default: 1,
 };

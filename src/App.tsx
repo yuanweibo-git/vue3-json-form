@@ -1,7 +1,7 @@
 import { defineComponent, reactive } from 'vue';
 import MonacoEditor from './components/MonacoEditor';
 import SchemaForm from '../lib/SchemaForm';
-import { demoSchema } from './schema-test/demo';
+import demoSchema from './schema-test/demo';
 
 import './app.less';
 type Schema = any;
@@ -23,14 +23,16 @@ export default defineComponent({
       customValidate: ((d: any, e: any) => void) | undefined;
     } = reactive({
       schema: null,
-      data: 13,
+      data: demoSchema.default,
       uiSchema: {},
       schemaCode: '',
       dataCode: '',
       uiSchemaCode: '',
       customValidate: undefined,
     });
-    const schema = demoSchema;
+
+    demo.dataCode = toJson(demoSchema.default);
+    const schema = demoSchema.schema;
     const schemaCode = toJson(schema);
 
     // closure 闭包 demo

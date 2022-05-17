@@ -9,7 +9,11 @@ export default defineComponent({
   setup(props) {
     return () => {
       const handleChange = (e: any) => {
-        props.onChange(e.target.value);
+        if (typeof e === 'number') {
+          props.onChange(e);
+        } else {
+          props.onChange(e.target.value);
+        }
       };
 
       return <SchemaItem schema={props.schema} value={props.value} onChange={handleChange} />;

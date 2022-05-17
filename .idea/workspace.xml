@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="007ef7f2-f240-4e62-85b6-6201ae179f0b" name="变更" comment="edit">
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+    <list default="true" id="007ef7f2-f240-4e62-85b6-6201ae179f0b" name="变更" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/SchemaForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/SchemaForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/fields/NumberField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/fields/NumberField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.coinfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.coinfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema-test/demo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema-test/demo.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="project setting" />
     <MESSAGE value="edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
